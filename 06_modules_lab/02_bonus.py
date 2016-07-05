@@ -1,10 +1,22 @@
-""" Write a program that reads 2 numbers from sys.argv
-and prints their sum.
-Bonus: Print error messages for invalid inputs.
-
-To print error messages we'll have to use a concept not yet learned in the
-course, and which will only be presented later: Exceptions.
-We'll tap into python's error handling and change its default
-error message to something more meaningful.
 """
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
+Python course - Verint
+Week 1
+
+"""
+from colorama import Fore,init
+import sys
+
+init()
+
+i = sys.argv
+
+if len(i)<>3:
+    print (Fore.RED + 'Error!')
+    print Fore.RESET + "pleae enter 2 number"
+else:
+    i = int(sys.argv[1]) + int(sys.argv[2])
+    print "The sum of the numbers is:",i
