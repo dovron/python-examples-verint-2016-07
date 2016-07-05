@@ -1,11 +1,27 @@
-""" Write a program that searches current working directory
-for files larger than 1MB. Every time you find such a file print
-its name to the user.
+"""
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
-- When the program finds a large file. It should ask the user
-  a message asking if she wants to delete it, and delete the
-  file if requested
+Python course - Verint
+Week 1
 
-- Take threshold and path as command line arguments
 """
 
+import os,sys
+from os.path import join, getsize
+
+path = '.'
+if len(sys.argv) >= 2:
+    path = sys.argv[1]
+
+size = 1000000
+if len(sys.argv) == 3:
+    size = int(sys.argv[2])
+
+for root, dir, files in os.walk(path):
+    for name in files:
+        if getsize(join(root, name)) > size:
+            print "Do you want to delete:" , join(root, name),"? [Y/N]"
+            if raw_input() == ("Y"):
+                os.remove(join(root, name))
