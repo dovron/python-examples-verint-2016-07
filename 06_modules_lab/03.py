@@ -22,6 +22,6 @@ if len(sys.argv) == 3:
 for root, dir, files in os.walk(path):
     for name in files:
         if getsize(join(root, name)) > size:
-            print "Do you want to delete:" , join(root, name),"? [Y/N]"
+            print "Do you want to delete {} ? [Y/N]".format(join(root, name))
             if raw_input() == ("Y"):
                 os.remove(join(root, name))
