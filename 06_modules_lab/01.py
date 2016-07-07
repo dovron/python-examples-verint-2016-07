@@ -12,6 +12,5 @@ import sys
 
 i = int(sys.argv[1])
 
-while i > 0:
-    i = i-1
+for i in range(0,i):
     print "Hello Python"
