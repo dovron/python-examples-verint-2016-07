@@ -1,6 +1,17 @@
 """
-Write a program that takes 2 file names
-and appends the second file's contents to
-the end of the first one
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
+
+Python course - Verint
+Week 2
+
 """
 
+import sys
+
+with open(sys.argv[1], "r") as fin:
+    with open(sys.argv[2], "a") as fout:
+        fout.write("\n")                
+        for line in fin:
+            fout.write(line)
