@@ -1,5 +1,16 @@
 """
-Write a function that calculates the sum
-of the 10th digit from all arguments passed to it
-"""
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
+Python course - Verint
+Week 2
+
+"""
+def ten(*nums):
+    res = 0
+    for n in nums:
+        if type(n) != int: raise Exception("Type should be integer")
+        res += n/10%10
+    return res
+    
