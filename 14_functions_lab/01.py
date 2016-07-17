@@ -8,14 +8,14 @@ Week 2
 
 """
 
-def sum_nums(*arg):
+def mysum(*arg):
     res = 0
     for n in arg:
         if type(n) == int:
             res += n
     return res
 
-def mul_nums(*arg):
+def mymul(*arg):
     res = 1
     for n in arg:
         if type(n) == int:
