@@ -8,7 +8,7 @@ Week 2
 ver 2
 """
 
-letter = [chr(i) for i in range(ord('a'),ord('z'))]
+letter = [chr(i) for i in range(ord('a'),1+ord('z'))]
 
 word = [ x + y + z for x in letter for y in letter for z in letter]
 
