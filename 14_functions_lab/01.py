@@ -21,7 +21,3 @@ def mul_nums(*arg):
         if type(n) == int:
             res *= n
     return res
-
-
-print sum_nums(941,'a',100,100,1001,100)
-print mul_nums('foo', 'bar', 10, 20)
