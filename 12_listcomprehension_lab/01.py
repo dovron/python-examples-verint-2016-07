@@ -8,6 +8,6 @@ Week 2
 ver 2
 """
 
-word = [chr(i) for i in range(ord('a'),ord('z'))]
+word = [chr(i) for i in range(ord('a'),1+ord('z'))]
 
 print word
