@@ -8,10 +8,6 @@ Week 2
 
 """
 def longer_than(num,*words):
-    res = []
-    for n in words:
-        if len(n) > num:
-            res.append (n)
-    return res   
+    return [word for word in words if len(word) > num]
 
 print longer_than(3, 'hit', 'me', 'baby', 'one', 'more', 'time')
