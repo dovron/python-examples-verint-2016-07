@@ -1,10 +1,18 @@
 """
-Write a function groupby that takes a list
-and a function and returns a dictionary
-keyd by the return value of the function on the list items
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
-For example:
-    groupby(lambda s: s[0], ['foo', 'fi', 'hello', 'hi'])
-    returns: { 'f': ['foo','fi'], 'h': ['hello', 'hi'] }
+Python course - Verint
+Week 2
+
 """
+from collections import defaultdict
 
+def groupby(func, *args):
+      dict = defaultdict(list)
+      for n in args:
+            dict[func(n)].append(n)
+      return dict
+
+print groupby(lambda(s): s[0], 'hello', 'hi', 'help', 'bye', 'here')
