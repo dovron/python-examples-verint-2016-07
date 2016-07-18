@@ -9,10 +9,7 @@ Week 2
 """
 
 def mysum(*arg):
-    res = 0
-    for n in arg:
-        if type(n) == int:
-            res += n
+    res = sum([n for n in arg if type(n) == int])
     return res
 
 def mymul(*arg):
@@ -21,3 +18,5 @@ def mymul(*arg):
         if type(n) == int:
             res *= n
     return res
+
+print mysum(401,202,202)
