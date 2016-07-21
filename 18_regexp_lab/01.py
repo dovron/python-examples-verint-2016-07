@@ -1,12 +1,21 @@
 """
-Write a program that reads data
-from property files.
-Each line in the file can either be:
-    An empty line
-    A comment line (Start with #)
-    A property line (of the form key = value)
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
-Write a program that takes a property file name and key
-as command line arguments and prints the requested value
+Python course - Verint
+Week 3
+
 """
 
+import re
+import sys
+
+def config_param(file,word):
+    with open(file, 'r') as f:
+        for line in f:
+            res = re.search(r'(\w+)\s*=\s(\w+)', line)
+            if res.group(1) == (word):
+                return res.group(2)
+
+print config_param(sys.argv[1],sys.argv[2])
