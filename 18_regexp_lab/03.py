@@ -1,15 +1,18 @@
 """
-Write a python program that takes a CSV file
-reads it line by line and prints each line
-with first and second columns reversed.
+      _      _      _
+   __(.)< __(.)> __(.)=
+   \___)  \___)  \___)   
 
-Sample input:
-    Shana,Sargent,shanasargent@isoswitch.com
-    Witt,Hampton,witthampton@zaphire.com
-    Morgan,Grant,morgangrant@lotron.com
+Python course - Verint
+Week 3
 
-Sample output:
-    Sargent,Shana,shanasargent@isoswitch.com
-    Hampton,Witt,witthampton@zaphire.com
-    Grant,Morgan,morgangrant@lotron.com
 """
+
+import re
+import sys
+
+
+with open(sys.argv[1], 'r') as f:
+    for line in f:
+        word = re.sub(r'(\w+),(\w+)', lambda m: m.group(2) + ',' + m.group(1) , line)
+        print word
