@@ -6,6 +6,7 @@
 Python course - Verint
 Week 3
 
+version 2
 """
 
 class Widget(object):
@@ -21,10 +22,10 @@ class Widget(object):
     def build(self):
         self.complete = True
         for dep in self.depends:
-            if not dep.complete:
-                dep.build()
-                print dep.name
-
+            if dep.complete: continue
+            dep.build()
+            print dep.name
+            
 
 luke    = Widget("Luke")
 hansolo = Widget("Han Solo")
