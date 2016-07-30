@@ -1,7 +1,15 @@
 """
-Write a program that takes a file name
-and prints line count for the file
+Python course - Verint
+Week4
 
-Alert the user politely if there was any problem opening the file
 """
+import sys
 
+i=0
+try:
+    with open(sys.argv[1], "r") as fin:
+        for line in fin: i += 1
+        print i
+    
+except Exception as e:
+    print "Sorry, file %s not found" % (sys.argv[1])
