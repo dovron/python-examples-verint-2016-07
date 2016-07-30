@@ -1,7 +1,17 @@
-"""
-Write a python program that takes numbers in a loop
-and for each number prints its square root
-If value is negative or not a number show 
-a warning and keep reading values
+""""
+Python course - Verint
+Week4
+
 """
 
+import math
+
+while True:
+    line = raw_input()
+    if not line: break
+
+    try:
+        print math.sqrt(int(line))
+    
+    except ValueError as e:
+        print "please type a valid positive number"
