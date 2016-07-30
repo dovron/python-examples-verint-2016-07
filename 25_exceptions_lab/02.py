@@ -11,5 +11,5 @@ try:
         for line in fin: i += 1
         print i
     
-except Exception as e:
+except IOError as e:
     print "Sorry, file %s not found" % (sys.argv[1])
